@@ -7,15 +7,19 @@ export const styles = StyleSheet.create({
     borderRadius: 7,
     marginHorizontal: 15,
     height: 40,
-    margin:15,
+    margin: 15,
   },
   inputStyle: {
     flex: 1,
-    fontSize:17,
+    fontSize: 17,
   },
-  iconStyle:{
-    fontSize:30,
-    alignSelf:'center',
-    marginHorizontal:11,
+  iconStyle: {
+    fontSize: 30,
+    alignSelf: 'center',
+    marginHorizontal: 11,
+  },
+  titleStyle: {
+    fontSize: 30,
+    margin: 15
   }
 })
