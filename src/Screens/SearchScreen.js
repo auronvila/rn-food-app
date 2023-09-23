@@ -8,11 +8,7 @@ export default function SearchScreen() {
   const [term, setTerm] = useState('')
   const [searchApi, errorMessage, results] = useResults()
 
-  function filterResultByPrice(price) {
-    return results.filter(result => {
-      return result.price === price
-    })
-  }
+  const filterResultByPrice = (price) => results.filter(result => result.price === price)
 
   return (
     <View style={{backgroundColor: '#fff', flex: 1}}>

@@ -7,9 +7,7 @@ export default function ResultsList(props) {
       <Text style={styles.titleStyle}>{props.title}</Text>
       <FlatList
         data={props.results}
-        renderItem={({item}) => {
-          return <Text>{item.name}</Text>
-        }}
+        renderItem={({item}) => <Text>{item.name}</Text>}
         keyExtractor={(result) => result.id}
         horizontal/>
     </View>
