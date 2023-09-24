@@ -17,7 +17,7 @@ export default function SearchScreen() {
         term={term}
         onTermChange={(newTerm) => setTerm(newTerm)}
       />
-      <Text> We have found {results.length}</Text>
+      <Text style={{alignSelf:'center'}}> We have found {results.length} results</Text>
       {errorMessage && <Text>{errorMessage}</Text>}
       <ResultsList results={filterResultByPrice('₺')} title={'Cost Effective'}/>
       <ResultsList results={filterResultByPrice('₺₺')} title={'Bit Pricer'}/>

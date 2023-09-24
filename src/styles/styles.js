@@ -20,16 +20,19 @@ export const styles = StyleSheet.create({
   },
   titleStyle: {
     fontSize: 30,
-    margin: 15
+    marginLeft: 15,
+    marginBottom:5,
   },
   imageStyle:{
     width:250,
     height:250,
     borderRadius:5,
-    margin:10,
     restaurantName:{
       fontWeight:'bold',
       fontSize:17,
     }
+  },
+  container: {
+    marginLeft:15,
   }
 })

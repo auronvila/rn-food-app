@@ -4,7 +4,7 @@ import ResultsDetail from './ResultsDetail';
 
 export default function ResultsList(props) {
   return (
-    <View>
+    <View style={{marginBottom:8}}>
       <Text style={styles.titleStyle}>{props.title}</Text>
       <FlatList
         showsHorizontalScrollIndicator={false}
