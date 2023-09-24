@@ -1,17 +1,27 @@
-import {FlatList, ScrollView, Text, View} from 'react-native';
+import {FlatList, ScrollView, Text, TouchableOpacity, View} from 'react-native';
 import {styles} from '../styles/styles';
 import ResultsDetail from './ResultsDetail';
+import {withNavigation} from 'react-navigation';
 
-export default function ResultsList(props) {
+function ResultsList(props) {
   return (
-    <View style={{marginBottom:8}}>
+    <View style={{marginBottom: 8}}>
       <Text style={styles.titleStyle}>{props.title}</Text>
       <FlatList
+        horizontal
         showsHorizontalScrollIndicator={false}
         data={props.results}
-        renderItem={({item}) => <ResultsDetail result={item}/>}
         keyExtractor={(result) => result.id}
-        horizontal/>
+        renderItem={({item}) => (
+          <TouchableOpacity onPress={() => props.navigation.navigate('Result', {
+            id: item.id
+          })}>
+            <ResultsDetail result={item}/>
+          </TouchableOpacity>
+        )}
+      />
     </View>
   )
 }
+
+export default withNavigation(ResultsList)

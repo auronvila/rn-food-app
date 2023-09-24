@@ -7,14 +7,15 @@ export default function SearchBar(props) {
     <View style={styles.searchInputBackground}>
       <Feather style={styles.iconStyle} name={'search'}/>
       <TextInput
-        onEndEditing={props.onTermSubmit}
         autoCorrect={false}
         autoCapitalize={'none'}
         value={props.term}
-        onChangeText={props.onTermChange}
         style={styles.inputStyle}
         placeholder={'Search'}
+        onChangeText={props.onTermChange}
+        onEndEditing={props.onTermSubmit}
       />
+
     </View>
   )
 }

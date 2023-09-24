@@ -11,17 +11,19 @@ export default function SearchScreen() {
   const filterResultByPrice = (price) => results.filter(result => result.price === price)
 
   return (
-    <ScrollView style={{backgroundColor: '#fff', flex: 1}}>
-      <SearchBar
-        onTermSubmit={searchApi}
-        term={term}
-        onTermChange={(newTerm) => setTerm(newTerm)}
-      />
-      <Text style={{alignSelf:'center'}}> We have found {results.length} results</Text>
-      {errorMessage && <Text>{errorMessage}</Text>}
-      <ResultsList results={filterResultByPrice('₺')} title={'Cost Effective'}/>
-      <ResultsList results={filterResultByPrice('₺₺')} title={'Bit Pricer'}/>
-      <ResultsList results={filterResultByPrice('₺₺₺')} title={'Big Spender'}/>
-    </ScrollView>
+    <>
+      <ScrollView style={{backgroundColor: '#fff', flex: 1}}>
+        <SearchBar
+          onTermSubmit={() => searchApi(term)}
+          term={term}
+          onTermChange={(newTerm) => setTerm(newTerm)}
+        />
+        <Text style={{alignSelf: 'center'}}> We have found {results.length} results</Text>
+        {errorMessage && <Text>{errorMessage}</Text>}
+        <ResultsList results={filterResultByPrice('₺')} title={'Cost Effective'}/>
+        <ResultsList results={filterResultByPrice('₺₺')} title={'Bit Pricer'}/>
+        <ResultsList results={filterResultByPrice('₺₺₺')} title={'Big Spender'}/>
+      </ScrollView>
+    </>
   )
 }
