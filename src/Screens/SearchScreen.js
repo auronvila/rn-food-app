@@ -1,4 +1,4 @@
-import {Text, View} from 'react-native';
+import {ScrollView, Text, View} from 'react-native';
 import SearchBar from '../components/SearchBar';
 import {useState} from 'react';
 import useResults from '../hooks/useResults';
@@ -11,7 +11,7 @@ export default function SearchScreen() {
   const filterResultByPrice = (price) => results.filter(result => result.price === price)
 
   return (
-    <View style={{backgroundColor: '#fff', flex: 1}}>
+    <ScrollView style={{backgroundColor: '#fff', flex: 1}}>
       <SearchBar
         onTermSubmit={searchApi}
         term={term}
@@ -22,6 +22,6 @@ export default function SearchScreen() {
       <ResultsList results={filterResultByPrice('₺')} title={'Cost Effective'}/>
       <ResultsList results={filterResultByPrice('₺₺')} title={'Bit Pricer'}/>
       <ResultsList results={filterResultByPrice('₺₺₺')} title={'Big Spender'}/>
-    </View>
+    </ScrollView>
   )
 }
