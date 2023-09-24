@@ -4,6 +4,9 @@ import ResultsDetail from './ResultsDetail';
 import {withNavigation} from 'react-navigation';
 
 function ResultsList(props) {
+  if (!props.results.length){
+    return null
+  }
   return (
     <View style={{marginBottom: 8}}>
       <Text style={styles.titleStyle}>{props.title}</Text>

@@ -21,18 +21,47 @@ export const styles = StyleSheet.create({
   titleStyle: {
     fontSize: 30,
     marginLeft: 15,
-    marginBottom:5,
+    marginBottom: 5,
   },
-  imageStyle:{
-    width:250,
-    height:250,
-    borderRadius:5,
-    restaurantName:{
-      fontWeight:'bold',
-      fontSize:17,
-    }
+  imageStyle: {
+    width: 250,
+    height: 250,
+    borderRadius: 5,
+  },
+  restaurantName: {
+    fontWeight: 'bold',
+    fontSize: 17,
   },
   container: {
-    marginLeft:15,
-  }
-})
+    marginLeft: 15,
+  },
+  detailImageStyle: {
+    width: 200,
+    height: 200,
+    margin:10,
+    borderRadius: 5,
+    alignSelf: 'center',
+    flexShrink:1
+  },
+  detailTitleStyle: {
+    alignSelf:'center',
+    fontSize: 25,
+    marginLeft: 15,
+    marginBottom: 20,
+    marginTop:15
+  },
+  locationText: {
+    fontSize: 25,
+    marginLeft: 15,
+    marginTop:15
+  },
+  locationDetailText: {
+    fontSize: 17,
+    marginLeft: 15,
+  },
+  moreInformationText: {
+    fontSize: 25,
+    marginLeft: 15,
+    marginTop: 20,
+  },
+});
